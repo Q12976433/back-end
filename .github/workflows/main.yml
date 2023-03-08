@@ -19,3 +19,13 @@ jobs:
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+
+
+   
+      
+      
+      - name: Build app
+        env:
+          BACKEND_API:  ${{ secrets.BACKEND_API }} 
+          BACKEND_PORT: ${{ secrets.BACKEND_PORT }}
+        run: npm run build
